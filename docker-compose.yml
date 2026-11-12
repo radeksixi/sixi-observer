@@ -1,7 +1,7 @@
 services:
   sixi-observer:
     build: .
-    image: ghcr.io/radek-sixi/sixi-observer:latest
+    image: ghcr.io/radeksixi/sixi-observer:latest
     restart: unless-stopped
     devices:
       - "${SIXI_SERIAL_PORT:-/dev/ttyACM0}:/dev/ttyACM0"

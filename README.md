@@ -20,7 +20,7 @@ By running `sixi-observer`, you unlock real-time radio telemetry and packet-path
 3. Plug in your **MeshCore radio** via USB and run:
 
 ```bash
-uvx --from git+https://github.com/radek-sixi/sixi-observer sixi-observer run \
+uvx --from git+https://github.com/radeksixi/sixi-observer sixi-observer run \
   --serial /dev/ttyACM0 \
   --token sobs_live_YOUR_TOKEN \
   --name "My MeshCore Node" \
@@ -29,7 +29,7 @@ uvx --from git+https://github.com/radek-sixi/sixi-observer sixi-observer run \
 
 > **No hardware plugged in yet?** Run with `--demo` to test live multi-hop comet animations and heuristic Ghost-Hop estimation immediately:
 > ```bash
-> uvx --from git+https://github.com/radek-sixi/sixi-observer sixi-observer run --demo
+> uvx --from git+https://github.com/radeksixi/sixi-observer sixi-observer run --demo
 > ```
 
 ### Option 2: Docker (24/7 Raspberry Pi / Linux / Mini-PC)
@@ -38,7 +38,7 @@ uvx --from git+https://github.com/radek-sixi/sixi-observer sixi-observer run \
 docker run -d --name sixi-observer --restart unless-stopped \
   --device /dev/ttyACM0 \
   -p 127.0.0.1:8765:8765 \
-  ghcr.io/radek-sixi/sixi-observer:latest \
+  ghcr.io/radeksixi/sixi-observer:latest \
   run --serial /dev/ttyACM0 --token sobs_live_YOUR_TOKEN --lat 47.37 --lon 8.54
 ```
 
@@ -61,7 +61,7 @@ docker run -d --name sixi-observer --restart unless-stopped \
 ## 🧪 Development & Tests
 
 ```bash
-git clone https://github.com/radek-sixi/sixi-observer.git
+git clone https://github.com/radeksixi/sixi-observer.git
 cd sixi-observer
 uv run --with pytest --with ruff ruff check src tests
 uv run --with pytest pytest -q
